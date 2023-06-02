@@ -116,7 +116,7 @@ class Everyday_Elementor_Card_Widget extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__('Content', 'textdomain'),
+				'label' => esc_html__('Content', 'everyday-elementor-widgets'),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -125,30 +125,30 @@ class Everyday_Elementor_Card_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'card_title',
 			[
-				'label' => esc_html__('Card Title', 'textdomain'),
+				'label' => esc_html__('Card Title', 'everyday-elementor-widgets'),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'placeholder' => esc_html__('Type your card title here', 'textdomain'),
+				'placeholder' => esc_html__('Type your card title here', 'everyday-elementor-widgets'),
 			]
 		);
 
 		$this->add_control(
 			'card_description',
 			[
-				'label' => esc_html__('Card Description', 'textdomain'),
+				'label' => esc_html__('Card Description', 'everyday-elementor-widgets'),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 10,
-				'default' => esc_html__('Default description', 'textdomain'),
-				'placeholder' => esc_html__('Type card description here', 'textdomain'),
+				'default' => esc_html__('Default description', 'everyday-elementor-widgets'),
+				'placeholder' => esc_html__('Type card description here', 'everyday-elementor-widgets'),
 			]
 		);
 
 		$this->add_control(
 			'card_wysiwyg',
 			[
-				'label' => esc_html__('WYSIWYG Description', 'textdomain'),
+				'label' => esc_html__('WYSIWYG Description', 'everyday-elementor-widgets'),
 				'type' => \Elementor\Controls_Manager::WYSIWYG,
-				'default' => esc_html__('Default description', 'textdomain'),
-				'placeholder' => esc_html__('Type your Card wysiwyg description here', 'textdomain'),
+				'default' => esc_html__('Default description', 'everyday-elementor-widgets'),
+				'placeholder' => esc_html__('Type your Card wysiwyg description here', 'everyday-elementor-widgets'),
 			]
 		);
 
@@ -158,7 +158,7 @@ class Everyday_Elementor_Card_Widget extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'section_style',
 			[
-				'label' => esc_html__('Style', 'textdomain'),
+				'label' => esc_html__('Style', 'everyday-elementor-widgets'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -166,7 +166,7 @@ class Everyday_Elementor_Card_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'title_option',
 			[
-				'label' => esc_html__('Title Options', 'textdomain'),
+				'label' => esc_html__('Title Options', 'everyday-elementor-widgets'),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'seperator' => 'before',
 			]
@@ -175,7 +175,7 @@ class Everyday_Elementor_Card_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'title_color',
 			[
-				'label' => esc_html__('Title Color', 'textdomain'),
+				'label' => esc_html__('Title Color', 'everyday-elementor-widgets'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#f00',
 				'selectors' => [
@@ -195,7 +195,7 @@ class Everyday_Elementor_Card_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'description_options',
 			[
-				'label' => esc_html__('Description Options', 'textdomain'),
+				'label' => esc_html__('Description Options', 'everyday-elementor-widgets'),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'seperator' => 'before',
 			]
@@ -204,7 +204,7 @@ class Everyday_Elementor_Card_Widget extends \Elementor\Widget_Base
 		$this->add_control(
 			'description_color',
 			[
-				'label' => esc_html__('Description Color', 'textdomain'),
+				'label' => esc_html__('Description Color', 'everyday-elementor-widgets'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#f00',
 				'selectors' => [
