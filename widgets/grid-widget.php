@@ -25,7 +25,7 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
     // Widget-Titel
     public function get_title()
     {
-        return __('Mein benutzerdefiniertes Grid', 'text-domain');
+        return __('Grid', 'text-domain');
     }
 
     // Widget-Icon (optional)
@@ -38,6 +38,21 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
     public function get_categories()
     {
         return ['everyday'];
+    }
+
+
+    /**
+     * Get widget keywords.
+     *
+     * Retrieve the list of keywords the oEmbed widget belongs to.
+     *
+     * @since 1.0.0
+     * @access public
+     * @return array Widget keywords.
+     */
+    public function get_keywords()
+    {
+        return ['grid', 'everyday', 'everyday-grid', 'everyday grid', 'grid everyday', 'grid-everyday'];
     }
 
     // Widget-Code
