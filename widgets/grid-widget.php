@@ -8,6 +8,14 @@ if (!defined('ABSPATH')) {
 class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
 {
 
+    public function __construct($data = [], $args = null)
+    {
+        parent::__construct($data, $args);
+        wp_register_style('demo-elementor-widget-css', plugin_dir_url(__FILE__) . '../assets/css/my-custom-grid-widget.css');
+
+        // wp_register_script('demo-elementor-widget-js',  plugin_dir_url(__FILE__) . '/assets/js/demo-elementor-widget.js', ['elementor-frontend'], '1.0.0', true);
+    }
+
     // Widget-Identifikator
     public function get_name()
     {
@@ -42,8 +50,8 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
         $items = isset($settings['items']) ? $settings['items'] : [];
         // wp_enqueue_style('my-custom-grid-widget', plugin_dir_url(__FILE__) . 'css/my-custom-grid-widget.css');
 
-        $plugin_url = plugin_dir_url(__FILE__); // Plugin-URL holen
-        wp_enqueue_style('my-custom-grid-widget-css', $plugin_url . 'css/my-custom-grid-widget.css'); // Externe CSS-Datei einbinden
+        // $plugin_url = plugin_dir_url(__FILE__); // Plugin-URL holen
+        // wp_enqueue_style('my-custom-grid-widget-css', $plugin_url . 'css/my-custom-grid-widget.css'); // Externe CSS-Datei einbinden
 
 
 ?>
@@ -127,4 +135,16 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
 
         $this->end_controls_section();
     }
+
+    public function get_style_depends()
+    {
+
+        return ['demo-elementor-widget-css'];
+    }
+
+    // public function get_script_depends(){
+
+    //     return [ 'demo-elementor-widget-js' ];
+
+    // }
 }
