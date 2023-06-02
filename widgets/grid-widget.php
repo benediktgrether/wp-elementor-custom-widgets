@@ -56,10 +56,8 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
                     <div class="box-hover">
                         <div class="pulse-button"></div>
                         <div class="overlay-hover"></div>
-
-                        <?php if (!empty($item['image']['url'])) : ?>
-                            <img class="img-grid" src="<?php echo esc_url($item['image']['url']); ?>" <?php if (!empty($item['image']['alt'])) : ?>alt="<?php echo esc_attr($item['image']['alt']); ?>" <?php endif; ?>>
-                        <?php endif; ?>
+                        <?php $image = $item['image']; ?>
+                        <?php include 'includes/simple-image.php'; ?>
                         <div class="top-text-hover">
                             <p class="grid-title"><?php echo esc_html($item['title']); ?></p>
                         </div>
