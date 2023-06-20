@@ -1,0 +1,29 @@
+.pulse-button {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background: #F27C00;
+    border-radius: 50%;
+    animation: shadow-pulse 1s infinite;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+
+    @include xl {
+        right: 15px;
+    }
+}
+
+.box-hover:hover .pulse-button {
+    opacity: 0;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 0 15px rgba(255, 0, 0, 0);
+    }
+}

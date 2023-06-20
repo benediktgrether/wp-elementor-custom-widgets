@@ -1,0 +1,38 @@
+.img-grid {
+	width: 100%;
+	height: 100% !important;
+	object-fit: cover;
+}
+
+.grid-title {
+	font-size: 18px;
+	font-family: 'Arial';
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFF;
+
+    @include sm {
+        font-size: 20px;
+    }
+
+    @include md {
+        font-size: 20px;
+    }
+
+    @include lg {
+        font-size: 16px;
+    }
+}
+
+.grid-desc {
+	font-size: 16px;
+	font-family: 'Arial';
+	color: #FFF;
+
+    @include sm {
+        font-size: 18px;
+    }
+    @include lg {
+        font-size: 14px;
+    }
+}

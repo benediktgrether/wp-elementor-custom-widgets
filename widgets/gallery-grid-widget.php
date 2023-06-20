@@ -4,27 +4,28 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-
 // Widget class
-class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
+class Everyday_Elementor_Gallery_Grid_Widget extends \Elementor\Widget_Base
 {
+
     public function __construct($data = [], $args = null)
     {
         parent::__construct($data, $args);
-        wp_register_style('grid-widget-css', plugin_dir_url(__FILE__) . '../assets/css/widgets/grid-widget.css');
+        wp_register_style('gallery-grid-widget-css', plugin_dir_url(__FILE__) . '../assets/css/widgets/gallery-grid-widget.css');
 
         // wp_register_script('demo-elementor-widget-js',  plugin_dir_url(__FILE__) . '/assets/js/demo-elementor-widget.js', ['elementor-frontend'], '1.0.0', true);
     }
+
     // Widget-Identifikator
     public function get_name()
     {
-        return 'grid';
+        return 'gallery-grid';
     }
 
     // Widget-Titel
     public function get_title()
     {
-        return __('Grid', 'text-domain');
+        return __('Gallery-Grid', 'text-domain');
     }
 
     // Widget-Icon (optional)
@@ -39,6 +40,7 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
         return ['everyday'];
     }
 
+
     /**
      * Get widget keywords.
      *
@@ -50,9 +52,8 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
      */
     public function get_keywords()
     {
-        return ['grid', 'grid', 'everyday', 'everyday-grid', 'everyday grid', 'grid everyday', 'grid-everyday'];
+        return ['gallery-grid', 'grid', 'everyday', 'everyday-grid', 'everyday grid', 'grid everyday', 'grid-everyday'];
     }
-
 
     // Widget-Code
     protected function render()
@@ -62,25 +63,26 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
         $wrapper_class = isset($settings['wrapper_class']) ? $settings['wrapper_class'] : '';
 
         $items = isset($settings['items']) ? $settings['items'] : [];
-        ?>
-            <div class="grid-container <?php echo esc_attr($wrapper_class); ?>"">
+?>
+
+        <div class="row gallery-grid-container <?php echo esc_attr($wrapper_class); ?>">
             <?php foreach ($items as $item) : ?>
-                <div class="<?php echo esc_attr($item['grid_position']); ?> box-hover box-hover-home">
-                    <div class="pulse-button"></div>
-                    <div class="overlay-hover"></div>
-                    <?php $image = $item['image']; ?>
-                    <?php $class = "img-grid"; ?>
-                    <?php include 'includes/simple-image.php'; ?>
-                    <div class="top-text-hover">
-                        <p class="grid-title"><?php echo esc_html($item['title']); ?></p>
-                        <p class="grid-desc"><?php echo esc_html($item['desc']); ?></p>
+                <div class="column-home">
+                    <div class="box-hover">
+                        <div class="pulse-button"></div>
+                        <div class="overlay-hover"></div>
+                        <?php $image = $item['image']; ?>
+                        <?php $class = "img-grid"; ?>
+                        <?php include 'includes/simple-image.php'; ?>
+                        <div class="top-text-hover">
+                            <p class="grid-title"><?php echo esc_html($item['title']); ?></p>
+                        </div>
                     </div>
                 </div>
             <?php endforeach; ?>
-            </div>
-        <?php
+        </div>
+<?php
     }
-
 
     protected function _register_controls()
     {
@@ -112,31 +114,6 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
                 'default' => __('Grid Item', 'text-domain'),
             ]
         );
-
-        $repeater->add_control(
-            'desc',
-            [
-                'label' => __('Title', 'text-domain'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
-                'default' => __('Wer bei uns arbeitet ist garantiert schwindelfrei. ', 'text-domain'),
-            ]
-        );
-
-		$repeater->add_control(
-			'grid_position',
-			[
-				'label' => esc_html__( 'Grid Positionierung', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'options' => [
-					'first-grid' => esc_html__( 'first-grid', 'textdomain' ),
-					'second-grid'  => esc_html__( 'second-grid', 'textdomain' ),
-					'third-grid' => esc_html__( 'third-grid', 'textdomain' ),
-					'fourth-grid' => esc_html__( 'fourth-grid', 'textdomain' ),
-					'fifth-grid' => esc_html__( 'fifth-grid', 'textdomain' ),
-					'sixth-grid' => esc_html__( 'sixth-grid', 'textdomain' ),
-				],
-			]
-		);
 
         $this->add_control(
             'items',
@@ -171,7 +148,7 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
     public function get_style_depends()
     {
 
-        return ['grid-widget-css'];
+        return ['gallery-grid-widget-css'];
     }
 
     // public function get_script_depends(){
@@ -180,5 +157,3 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
 
     // }
 }
-
-

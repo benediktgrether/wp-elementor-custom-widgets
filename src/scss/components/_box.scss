@@ -1,0 +1,91 @@
+.box-hover {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.box-hover:hover .overlay-hover {
+    top: 5%;
+    transform: rotate(0);
+    opacity: 1;
+
+    @include md {
+        top: 10%;
+    }
+}
+
+.box-hover:hover .top-text-hover {
+    opacity: 1;
+}
+
+.box-hover-home {
+    padding: 15px;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+
+    @include md {
+        width: 100%;
+		padding: 0px;
+		margin-top: 20px;
+    }
+
+    @include lg {
+        width: 50%;
+        padding: 0px 15px;
+        margin-top: 30px;
+    }
+
+    @include xl {
+        width: 100%;
+        margin-top: 0;
+        top: 0;
+        left: 0;
+        padding: 0;
+    }
+}
+
+.top-text-hover {
+    color: #FFF;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .5s ease;
+    z-index: 3;
+    opacity: 0;
+    padding: 15px;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+
+
+    @include md {
+        padding: 30px;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+    } 
+}
+
+.overlay-hover {
+    position: absolute;
+    background: #F27C00;
+    width: 90%;
+    left: 5%;
+    height: 100%;
+    z-index: 2;
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
+    top: 100%;
+	opacity: 0;
+
+
+    @include md {
+        width: 80%;
+        left: 10%;
+    } 
+}
+
