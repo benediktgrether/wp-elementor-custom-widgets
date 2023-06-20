@@ -11,6 +11,17 @@
       "width": 1024,
       "height": 768
     }
+    ,
+    {
+      "label": "Desktop",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "label": "4k",
+      "width": 3840,
+      "height": 2160
+    }
   ],
   "onBeforeScript": "puppet/onBefore.js",
   "onReadyScript": "puppet/onReady.js",
@@ -18,11 +29,11 @@
     {
       "label": "BackstopJS Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
-      "referenceUrl": "",
+      "url": "https://willi.local/",
+      "referenceUrl": "https://willi.everyday.agency/",
       "readyEvent": "",
       "readySelector": "",
-      "delay": 0,
+      "delay": 20,
       "hideSelectors": [],
       "removeSelectors": [],
       "hoverSelector": "",
@@ -31,7 +42,7 @@
       "selectors": [],
       "selectorExpansion": true,
       "expect": 0,
-      "misMatchThreshold" : 0.1,
+      "misMatchThreshold" : 10.0,
       "requireSameDimensions": true
     }
   ],

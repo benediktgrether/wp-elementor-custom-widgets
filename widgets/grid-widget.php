@@ -65,7 +65,7 @@ class Everyday_Elementor_Grid_Widget extends \Elementor\Widget_Base
         ?>
             <div class="grid-container <?php echo esc_attr($wrapper_class); ?>"">
             <?php foreach ($items as $item) : ?>
-                <div class="<?php echo esc_attr($item['grid_position']); ?> box-hover box-hover-home">
+                <div class="<?php echo esc_attr($item['grid_position']); ?> grid-item box-hover box-hover-home">
                     <div class="pulse-button"></div>
                     <div class="overlay-hover"></div>
                     <?php $image = $item['image']; ?>
