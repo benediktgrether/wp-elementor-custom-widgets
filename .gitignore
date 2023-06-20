@@ -17,3 +17,6 @@ pnpm-debug.log*
 
 # package.lock
 package-lock.json
+
+test/backstop_data/bitmaps_test
+test/backstop_data/html_report
