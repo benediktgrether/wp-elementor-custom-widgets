@@ -1,3 +1,6 @@
+
+@import "../configuration/mixin";
+
 .row {
     display: flex;
     flex-flow: row wrap;
@@ -6,15 +9,18 @@
 
 .gallery-grid-container {
     max-width: var(--content-width);
-    padding: 0px 5%;
+    padding: 0px 16px;
     margin: 0 auto;
 }
 
 .column-home {
     // min-width: 30%;
-    width: calc(33% - 30px);
+    width: 100%;
     aspect-ratio: 1 / 1;
+
+    @include lg {
+        width: calc(33% - 30px);
+    }
 }
 
-@import "../configuration/mixin";
 @import "../components/box";

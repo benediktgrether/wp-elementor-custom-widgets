@@ -5,7 +5,7 @@
  * Description: Own Everyday Plugins 
  * Plugin URI: https://everyday.agency/
  * Author: Benedikt Grether
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author URI: https://benediktgrether.de
  *
  * Text Domain: everyday-elementor-widgets
