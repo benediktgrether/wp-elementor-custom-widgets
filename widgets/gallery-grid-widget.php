@@ -64,22 +64,23 @@ class Everyday_Elementor_Gallery_Grid_Widget extends \Elementor\Widget_Base
 
         $items = isset($settings['items']) ? $settings['items'] : [];
 ?>
-
-        <div class="row gallery-grid-container <?php echo esc_attr($wrapper_class); ?>">
-            <?php foreach ($items as $item) : ?>
-                <div class="column-home">
-                    <div class="box-hover">
-                        <div class="pulse-button"></div>
-                        <div class="overlay-hover"></div>
-                        <?php $image = $item['image']; ?>
-                        <?php $class = "img-grid"; ?>
-                        <?php include 'includes/simple-image.php'; ?>
-                        <div class="top-text-hover">
-                            <p class="grid-title"><?php echo esc_html($item['title']); ?></p>
+        <div class="gallery-grid-container">
+            <div class="row <?php echo esc_attr($wrapper_class); ?>">
+                <?php foreach ($items as $item) : ?>
+                    <div class="column-home">
+                        <div class="box-hover">
+                            <div class="pulse-button"></div>
+                            <div class="overlay-hover"></div>
+                            <?php $image = $item['image']; ?>
+                            <?php $class = "img-grid"; ?>
+                            <?php include 'includes/simple-image.php'; ?>
+                            <div class="top-text-hover">
+                                <p class="grid-title"><?php echo esc_html($item['title']); ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
 <?php
     }
